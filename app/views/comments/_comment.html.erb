@@ -1,0 +1,3 @@
+<% @project.comments.each do |comment| %>
+  <p><%= comment.user.username %> posted <%= comment.body %></p>
+<% end %>
