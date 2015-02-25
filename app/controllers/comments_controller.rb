@@ -4,9 +4,8 @@ class CommentsController < ApplicationController
     @project = Project.find(params[:project_id])
     @comment = @project.comments.new comment_params
     @comment.user = current_user
-    if @comment.save?
-      redirect_to @project, notice: "added comment"
-    end
+    @comment.save
+    redirect_to @project, notice: "added comment"
   end
 
   private
