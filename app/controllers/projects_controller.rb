@@ -48,7 +48,7 @@ class ProjectsController < ApplicationController
     end
 
     def own_auth
-      if !user_signed_in || current_user != Project.find(params[:id]).user
+      if !user_signed_in? || current_user != Project.find(params[:id]).user
         redirect_to @project, notice: "you cannot do this"
       end
     end
