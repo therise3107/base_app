@@ -1,15 +1,8 @@
-
-
 <div class="media">
   <% @project.comments.each do |comment| %>
   <div class="media-left">
     <a href="#">
-      <% if comment.user.avatar.present? %>
-        <%=image_tag(comment.user.avatar.url(:thumb) ,class:"media-object",alt:"user", size: '64x64' )%>
-      <% else%>
-        <%=image_tag('images.jpg', class: "media-object", alt:'user_image', size: '64x64')%>
-      <% end %>
-
+    <%= image_tag(comment.user.gravatar_url, class: 'media-object')%>
     </a>
   </div>
   <div class="media-body">
