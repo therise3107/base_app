@@ -39,6 +39,8 @@ gem 'simple_form'
 gem "mini_magick"
 gem "refile", require: ["refile/rails", "refile/image_processing"]
 
+#adding images with gravatar
+gem 'gravtastic'
 
 #gem 'newrelic_rpm'
 #intercom for users

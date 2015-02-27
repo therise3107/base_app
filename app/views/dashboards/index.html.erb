@@ -1,6 +1,22 @@
 <h3>I am <p class='lead'><%= current_user.username %></p></h3>
+<<<<<<< HEAD
+=======
+<% if current_user.avatar.present? %>
+<%= image_tag current_user.avatar.url(:medium) %>
+<% else%>
+<%= image_tag('images.jpg',size: '460x460', alt:'default user image') %>
+<%end%>
+>>>>>>> 65b991a... added gravatar
+
+<%= image_tag current_user.gravatar_url %>
 
 <h2>Updates</h2>
+<<<<<<< HEAD
+=======
+
+
+
+>>>>>>> 65b991a... added gravatar
 <% @activities.each do |activity|%>
 <%= link_to activity.owner.username, activity.owner.username %>
 <%= render_activity activity%>

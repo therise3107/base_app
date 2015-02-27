@@ -1,3 +1,20 @@
-<% @project.comments.each do |comment| %>
-  <p><%= comment.user.username %> posted <%= comment.body %></p>
-<% end %>
+
+
+<div class="media">
+  <% @project.comments.each do |comment| %>
+  <div class="media-left">
+    <a href="#">
+      <% if comment.user.avatar.present? %>
+        <%=image_tag(comment.user.avatar.url(:thumb) ,class:"media-object",alt:"user", size: '64x64' )%>
+      <% else%>
+        <%=image_tag('images.jpg', class: "media-object", alt:'user_image', size: '64x64')%>
+      <% end %>
+
+    </a>
+  </div>
+  <div class="media-body">
+    <h4 class="media-heading"><%= comment.user.username %> ...</h4>
+    <%= comment.body %>
+  </div>
+  <% end %>
+</div>
