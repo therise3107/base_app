@@ -1,11 +1,13 @@
 <h3>I am <p class='lead'><%= current_user.username %></p></h3>
-
+<br>
+<%= link_to 'Profile', current_user %>
+<br>
 <%= image_tag current_user.gravatar_url %>
-
+<ul>
 <% @activities.each do |activity|%>
+<li>
 <%= link_to activity.owner.username, activity.owner if activity.owner %>
 <%= render_activity activity%>
-
+</li>
 <% end %>
-
-<%= link_to 'Profile', current_user %>
+</ul>
