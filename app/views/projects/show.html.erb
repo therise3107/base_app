@@ -1,4 +1,8 @@
 <p id="notice"><%= notice %></p>
+<p>
+    <strong>Created by: </strong>
+    <%= link_to @project.user.username, @project.user  %>
+</p>
 
 <p>
   <strong>Title:</strong>
