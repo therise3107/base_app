@@ -36,8 +36,8 @@ gem "chartkick"
 
 gem 'simple_form'
 
-gem "mini_magick"
-gem "refile", require: ["refile/rails", "refile/image_processing"]
+#gem "mini_magick"
+#gem "refile", require: ["refile/rails", "refile/image_processing"]
 
 #adding images with gravatar
 gem 'gravtastic'
