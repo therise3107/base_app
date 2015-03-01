@@ -1,5 +1,5 @@
 Rails.application.routes.draw do
-  root 'projects#index'
+  root 'welcome#index'
   devise_for :users
   resources :dashboards, only: :index
   resources :projects do
