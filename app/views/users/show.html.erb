@@ -2,7 +2,9 @@
 <p>Find me in app/views/users/show.html.erb</p>
 <h2>I am <%= @user.username %> </h2>
 
-
+<% if user_signed_in? %>
+<%= link_to "Follow", friendships_path(:friend_id =>@user), method: :post %>
+<% end %>
 
 <br>
 <h3>Following</h3>
