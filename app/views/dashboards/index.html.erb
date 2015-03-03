@@ -1,8 +1,42 @@
-<h3>I am <p class='lead'><%= current_user.username %></p></h3>
-<br>
-<%= link_to 'Profile', current_user %>
-<br>
-<%= image_tag current_user.gravatar_url %>
+<body>
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-sm-3 col-md-2 sidebar">
+      <ul class="nav nav-sidebar">
+        <li class="active"><a href="#">Overview <span class="sr-only">(current)</span></a></li>
+        <li><%= link_to 'Profile', current_user %></li>
+        <li><a href="#">Analytics</a></li>
+        <li><a href="#">Export</a></li>
+      </ul>
+      <ul class="nav nav-sidebar">
+        <li><a href="">Nav item</a></li>
+        <li><a href="">Nav item again</a></li>
+        <li><a href="">One more nav</a></li>
+        <li><a href="">Another nav item</a></li>
+        <li><a href="">More navigation</a></li>
+      </ul>
+      <ul class="nav nav-sidebar">
+        <li><a href="">Nav item again</a></li>
+        <li><a href="">One more nav</a></li>
+        <li><a href="">Another nav item</a></li>
+      </ul>
+    </div>
+    <div class="col-md-sm-9 col-md-10">
+      <h1>Dashboard</h1>
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+<h3>I am <p class='lead'><%= current_user.username %></p></h>
+  <%= image_tag current_user.gravatar_url %>
 <ul>
 <% @activities.each do |activity|%>
 <li>
@@ -11,3 +45,7 @@
 </li>
 <% end %>
 </ul>
+</div>
+</div>
+</div>
+</body>
