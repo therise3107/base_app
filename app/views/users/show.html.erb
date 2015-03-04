@@ -2,8 +2,12 @@
 <p>Find me in app/views/users/show.html.erb</p>
 <h2>I am <%= @user.username %> </h2>
 
-<% if user_signed_in? %>
-<%= link_to "Follow", friendships_path(:friend_id =>@user), method: :post %>
+<% if current_user %>
+  <% if current_user.friends.include? @user %>
+    <%= link_to "Remove Friend", current_user.friendships.find_by_friend_id(@user.id), method: :delete %>
+  <% else %>
+    <%= link_to "Add Friend", friendships_path(friend_id: @user), method: :post %>
+  <% end %>
 <% end %>
 
 <br>
